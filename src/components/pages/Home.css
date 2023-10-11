@@ -1,0 +1,21 @@
+.main
+{
+    width: 70%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1,h2,h3,h4,h5,h6,p
+{
+    margin-block-end: 0em;
+    margin-block-start: 0em;
+    user-select: none;
+   
+}
+body{
+    background: #f8fdfc;
+    font-family: 'Josefin Sans', cursive;
+}
+.home-main{
+    background: linear-gradient(45deg, #d79b9b, #9ad5cd);
+}

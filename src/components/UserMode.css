@@ -1,0 +1,16 @@
+.background {
+background: linear-gradient(45deg, #c4c8f9, #c9e6e2);
+height: 100%;
+width: 100%;
+display: flex;
+justify-content: center; 
+align-items: center; 
+height: 100vh; 
+}
+.user-block{
+    width: 40%;
+    height: 200px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 3px 9px -4px black;
+}
