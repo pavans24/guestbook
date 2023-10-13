@@ -11,6 +11,7 @@ const [adminUsername, setAdminUsername] = useState('');
 
 const handleadminname = (e) => {
   const input = e.target.value;
+console.log(localStorage.getItem('imageData'));
 
   // Check if the input contains whitespace.
   if (input.includes(' ')) {

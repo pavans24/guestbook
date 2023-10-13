@@ -4,9 +4,13 @@ import './GuestEntry.css';
 import validator from 'validator';
 import Cookies from 'js-cookie';
 import { useNavigate  } from 'react-router-dom';
+import pako from 'pako';
+import browserImageCompression  from "browser-image-compression";
 
 function GuestEntry(props) {
   const navigate = useNavigate();
+
+
     //name
     const [entryname, setEntryname] = useState('');
 
@@ -42,8 +46,44 @@ function GuestEntry(props) {
 
   //file
   const [file, setFile] = useState(null);
+  const [imgString, setImgString] = useState(null);
+ 
+
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
+    const file = selectedFile;
+    const reader = new FileReader();
+
+    reader.onload = (e) => {
+      const base64String = e.target.result;
+      const encodedData = btoa(base64String); 
+      // Now you have the image as a base64 string, which you can use in your React component
+      console.log(base64String);
+      const binaryData = atob(encodedData);
+
+      // Convert the binary data to a Uint8Array
+      const uint8Array = new Uint8Array(binaryData.length);
+      for (let i = 0; i < binaryData.length; i++) {
+        uint8Array[i] = binaryData.charCodeAt(i);
+      }
+    
+      // Compress the data
+      const compressedData = pako.deflate(uint8Array);
+    
+      // Convert the compressed data to a Base64 string
+      const compressedBase64String = btoa(String.fromCharCode.apply(null, compressedData));
+     
+      
+
+       console.log("te"+localStorage.getItem('imageData'));
+       
+      setImgString(base64String);
+
+     
+    };
+
+    reader.readAsDataURL(file);
+    
      // Check file is selected
      if (selectedFile) {
         // Check file type(allow only images)
@@ -90,7 +130,7 @@ function GuestEntry(props) {
       alert('Not a Valid Email');
       return;
     }
-
+   
     if(entryname !== '' && email !== ''){
 
         let blobURL = '';
@@ -115,7 +155,7 @@ function GuestEntry(props) {
                   identifier: indicator+'_',
                   name: entryname,
                   email: email,
-                  image: URL.revokeObjectURL(blobURL)
+                  image: ''
                 })
               };
               
@@ -132,6 +172,12 @@ function GuestEntry(props) {
                 setEmail('');
                 setImageBlobURL(null);
                 handleResetFile();
+                return response.json();
+              })
+              .then((data) => {
+                if(data && data.id != '')
+                console.log('id:'+data.id)
+                localStorage.setItem(data.id, imgString);
               })
             };
       

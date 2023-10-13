@@ -66,7 +66,7 @@ function AdminDashboard() {
       .map(ele=>{
           return(
          
-      <EntryList id={ele.id} entryname={ele.name} mail={ele.email} image={ele.image} message={ele.message} />
+      <EntryList id={ele.id} entryname={ele.name} email={ele.email} image={localStorage.getItem(ele.id)} message={ele.message} identifier={ele.identifier}  />
       
           )
           
