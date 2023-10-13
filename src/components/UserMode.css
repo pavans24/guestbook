@@ -9,8 +9,31 @@ height: 100vh;
 }
 .user-block{
     width: 40%;
-    height: 200px;
     background: white;
     border-radius: 10px;
     box-shadow: 2px 3px 9px -4px black;
+    padding: 50px 30px;
+    background: #f3fcff;
+}
+.header{
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+.flex-center{
+    display: flex;
+    
+    justify-content: space-evenly;
+}
+
+
+@media only screen and (max-width:500px) {
+    .user-block{
+        width: 90% !important;
+    }
+}
+@media only screen and (min-width:500px) and (max-width:800px) {
+    .user-block{
+        width: 60% !important;
+    }
 }

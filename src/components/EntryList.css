@@ -1,0 +1,25 @@
+.entry-cards{
+    display: flex;
+    width: 35%;
+}
+.cards{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #ddd;
+    background: beige;
+    margin: 10px 0;
+}
+.cards-pic{
+    width: 25%;
+    height: 120px;
+    background: #6f53fd;
+}
+.card-button{
+    background: red;
+    border: none;
+    padding: 8px;
+    color: white;
+    font-weight: bold;
+}

@@ -1,0 +1,42 @@
+
+.main-head {
+    padding: 10px;
+    background-color: aqua;
+    margin: 20px 0;
+    text-align: center;
+}
+.flex-align{
+    display: flex;
+}
+.cards{
+    width: 65%;
+}
+.top-header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 15px;
+}
+.head{
+    color: red;
+    margin: 20px 0;
+}
+.flex-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+@media only screen and (max-width:500px) {
+    .ientry-cards{
+        width: 85% !important;
+    }
+    
+  }
+  
+  @media only screen and (min-width:500px) and (max-width:800px) {
+    .entry-cards{
+      width: 85% !important;
+  }
+
+  }

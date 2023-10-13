@@ -1,0 +1,21 @@
+
+.main-head {
+    padding: 10px;
+    background-color: aqua;
+    margin: 20px 0;
+    text-align: center;
+}
+.inner-block {
+    background: #d7fae0;
+    padding: 30px;
+    border-radius: 10px;
+    width: 30%;
+}
+.admin-sign-in{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+.align{
+    text-align: center;
+}

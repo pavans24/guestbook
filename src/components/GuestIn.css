@@ -1,0 +1,77 @@
+.main-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 100px;
+  }
+  .sign-up {
+    width: 25%;
+    text-align: center;
+  }
+  
+  .seperator {
+    width: 1%;
+  }
+  
+  .sign-in {
+    width: 25%;
+    text-align: center;
+  }
+  .main-head{
+    padding: 10px;
+    background-color: aqua;
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .form-head{
+    margin-bottom: 20px;
+  }
+  .align{
+    text-align: center;
+  }
+
+  
+@media only screen and (max-width:500px) {
+  .inner-block{
+      width: 85% !important;
+  }
+  .main-container{
+    flex-wrap: wrap;
+    margin-top: 30px !important;
+  }
+  .vr{
+    display: none !important;
+  }
+  .sign-in{
+    margin-top: 35px;
+  }
+  .sign-up, .sign-in{
+    width: 85% !important;
+
+  }
+}
+
+@media only screen and (min-width:500px) and (max-width:800px) {
+  .inner-block{
+    width: 65% !important;
+}
+.main-container{
+  flex-wrap: wrap;
+  margin-top: 30px !important;
+}
+
+.sign-in{
+  margin-top: 35px;
+}
+.sign-up, .sign-in{
+  width: 37% !important;
+
+}
+}
+
+@media only screen and (min-width:800px) and (max-width:1100px) {
+  .inner-block{
+    width: 50% !important;
+}
+}

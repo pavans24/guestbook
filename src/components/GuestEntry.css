@@ -1,0 +1,14 @@
+.entry-block{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+.inner-block{
+    background: antiquewhite;
+    padding: 30px;
+    border-radius: 10px;
+}
+.top-header{
+    display: flex;
+    justify-content: space-between;
+}
